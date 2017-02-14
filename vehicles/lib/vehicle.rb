@@ -8,6 +8,10 @@ class Vehicle
       @id = @@vehicles.length().+(1)
     end
 
+    define_method(:id) do
+      @id
+    end
+
     define_method(:make) do
       @make
     end
@@ -41,14 +45,8 @@ class Vehicle
       american_cars = ["Chrysler", "Ford", "GM"]
       american_cars.include?(@make).&(self.age().<=(15))
     end
-    describe("#id") do
-      it("returns the id of the vehicle") do
-        test_vehicle = Vehicle.new("Toyota", "Prius", 2000)
-        test_vehicle.save()
-        expect(test_vehicle.id()).to(eq(1))
-      end
-    end
-    
+
+
     define_singleton_method(:find) do |identification|
       found_vehicle = nil
       @@vehicles.each() do |vehicle|

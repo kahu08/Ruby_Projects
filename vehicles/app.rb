@@ -13,7 +13,7 @@ require('sinatra')
   end
 
   get('/vehicles/new') do
-  erb(:vehicles_form)
+  erb(:vehicle_form)
   end
 
   post('/vehicles') do
