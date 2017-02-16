@@ -1,0 +1,10 @@
+<h3>Here are all the cars in this dealership:</h3>
+
+  <ul>
+    <% @dealership.cars().each() do |car| %>
+      <li><a href="/vehicle/<%= car.id() %>"><%= car.make() %> <%= car.model() %> <%= car.year() %></a></li>
+    <% end %>
+  </ul>
+
+  <a href="/dealerships/<%= @dealership.id%>/vehicles/new">Add a new vehicle</a>
+  <a href="/">Return to Main Page</a>
