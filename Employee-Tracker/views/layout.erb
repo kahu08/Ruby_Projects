@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Employee Tracker</title>
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    </head>
+    <body>
+          <nav class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="/">ET</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="/">Divisions</a></li>
+              <li><a href="/divisions/new">Add Division</a></li>
+              <li><a href="/employees/new">Add Employee</a></li>
+          </ul>
+      </div>
+  </nav>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </body>
+  </html>
